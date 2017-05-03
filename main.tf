@@ -17,7 +17,7 @@
 #
 #     testing-bulldog
 #
-
+stupid syntax error
 terraform {
   backend "atlas" {
      name = "chirsch/training"
