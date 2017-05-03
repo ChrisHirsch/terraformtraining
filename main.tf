@@ -27,7 +27,7 @@ terraform {
 variable "aws_access_key" {}
 variable "aws_secret_key" {}
 variable "num_webs" {
-default = "2"
+default = "3"
 }
 
 variable "aws_region" {
@@ -41,7 +41,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "web" {
-  count                  = "3"
+  count                  = "${var.num_webs}"
   ami                    = "ami-2df66d3b"
   instance_type          = "t2.micro"
   subnet_id              = "subnet-75a08610"
